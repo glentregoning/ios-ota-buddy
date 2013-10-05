@@ -63,8 +63,8 @@ otaplist()
         ARTWORK_PATH=$(unzip -l "$1" "**/iTunesArtwork" | awk '/-----/ {p = ++p % 2; next} p { s = ""; for (i = 4; i <= NF; i++) s = s $i " "; print s }')
         echo "Artwork Path" $ARTWORK_PATH
         unzip -j "$1" "`echo $ARTWORK_PATH`"
-        mv iTunesArtwork image.512x512.jpg
-        ARTWORK_NAME=image.512x512.jpg
+        mv iTunesArtwork image.512x512.png
+        ARTWORK_NAME=image.512x512.png
 
 		# Clean up
 		rm $APP_PLIST
